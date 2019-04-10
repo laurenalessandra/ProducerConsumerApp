@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func producerPressed(_ sender: UIButton) {
-        print("new cell!")
         Timer.scheduledTimer(withTimeInterval: 3, repeats: true, block: { _ in
             self.cells.append("New cell!")
             self.tableView.reloadData()
@@ -28,7 +27,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func consumerPressed(_ sender: UIButton) {
-        print("delete cell")
         Timer.scheduledTimer(withTimeInterval: 4, repeats: true, block: { _ in
             if !self.cells.isEmpty {
                 self.cells.removeLast()
